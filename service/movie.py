@@ -1,4 +1,4 @@
-from models.movie import Movie as MovieModel
+from models.Supplier import Movie as MovieModel
 from schemas.movie import Movie
 
 

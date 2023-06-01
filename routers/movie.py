@@ -5,7 +5,7 @@ from fastapi.encoders import jsonable_encoder
 
 from fastapi.security import HTTPBearer
 from config.database import Session
-from models.movie import Movie as MovieModel
+from models.Supplier import Movie as MovieModel
 from service.movie import MovieService
 from schemas.movie import Movie
 

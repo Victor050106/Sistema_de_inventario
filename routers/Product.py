@@ -3,8 +3,8 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.encoders import jsonable_encoder
 
 
-from service.genres import GenresService
-from schemas.genres import Genres 
+from service.Product import GenresService
+from schemas.Product import Genres 
 from config.database import Session
 
 

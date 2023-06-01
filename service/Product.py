@@ -1,4 +1,4 @@
-from models.genres import Genres as GenresModel
+from models.Product import Genres as GenresModel
 
 class GenresService():
     def __init__(self, db):
