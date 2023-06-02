@@ -3,9 +3,10 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 
 
+from config.database import Session
 from service.Product import ProductService
 from schemas.Product import Product 
-from config.database import Session
+from models.Product import Product as ProductModel
 
 
 
