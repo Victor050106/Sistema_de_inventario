@@ -25,7 +25,7 @@ def get_supplier_for_id(id:int):
     result = SupplierService(db).get_for_id(id)
     return JSONResponse (content=jsonable_encoder(result),status_code=200)
 
-@supplier_router.post("/supplier",tags=["product"],status_code=201)
+@supplier_router.post("/supplier",tags=["supplier"],status_code=201)
 def create_supplier(supplier:Supplier):
     db = Session()
     SupplierService(db).create_supplier(supplier)
