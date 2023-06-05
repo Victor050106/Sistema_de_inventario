@@ -5,8 +5,10 @@ from fastapi.responses import HTMLResponse
 from config.database import engine,Base
 
 from middlewares.error_handler import Errorhandler
-from routers.movie import movie_router
-from routers.Product import genres_router
+
+from routers.Product import product_router
+from routers.Supplier import supplier_router
+from routers.Supplies import supplies_router
 
 
 
@@ -15,8 +17,10 @@ app.title = "Mi app con FastAPI"
 app.version = "0.0.1"
 
 app.add_middleware(Errorhandler)
-app.include_router(movie_router)
-app.include_router(genres_router)
+
+app.include_router(product_router)
+app.include_router(supplier_router)
+app.include_router(supplies_router)
 
 
 Base.metadata.create_all(bind=engine)
@@ -29,4 +33,5 @@ def message():
 @app.get('/hola',tags=['home'])
 def hola():
     return HTMLResponse('<h1>Hola Clase</h1>')
+
 
