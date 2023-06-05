@@ -3,8 +3,8 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.encoders import jsonable_encoder 
 
 
-from service.supplies import SuppliesService
-from schemas.supplies import Supplies
+from service.Supplies import SuppliesService
+from schemas.Supplies import Supplies
 from config.database import Session
 
 
