@@ -39,3 +39,4 @@ class SupplierService():
         result = self.db.query(Suppliermodel).filter(Suppliermodel.id == id).first()
         return result
         
+        
