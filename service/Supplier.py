@@ -1,7 +1,9 @@
+"""Schemas and models are called"""
 from models.Supplier import Supplier as SupplierModel
 from schemas.Supplier import Supplier
 
 class SupplierService():
+    """Creating the class SupplierService"""
     def __init__(self, db) -> None:
         self.db = db
         
