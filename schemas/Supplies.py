@@ -1,21 +1,17 @@
-from typing import Optional
 from pydantic import BaseModel, Field
-
+from typing import Optional
 
 class Supplies(BaseModel):
-    """create Supplies schemas"""
-    id: Optional[int] = None
-    supplier_id: Optional[int] = None
-    product_id: Optional[int] = None
-    purchase_price: float = Field(gt=0, description="purchase price")
-    
+    id : Optional [int] 
+    supplier_id : int = Field(ge=1)
+    product_id : int = Field(ge=1)
+    purchase_price : float = Field(ge=1)
+
     class Config:
-        """example of supplies"""
         schema_extra = {
             "example":{
-                "id" : 1,
-                "supplier_id" : 1,
-                "product_id" : 1,
-                "purchase_price" : 9.000
+                'supplier_id': 1,
+                'product_id': 1,                
+                'purchase_price':1
             }
         }
